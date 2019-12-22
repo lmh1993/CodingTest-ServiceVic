@@ -10,9 +10,16 @@
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
+    "axios": "^0.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "ignore-case": "^0.1.0",
     "react": "^16.12.0",
+    "react-autosuggest": "^9.4.3",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
+    "react-switch": "^5.0.1",
+    "react-toggle-switch": "^3.0.4",
     "typescript": "^3.7.3"
   },
   "scripts": {
@@ -35,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-autosuggest": "^9.3.13"
   }
 }
