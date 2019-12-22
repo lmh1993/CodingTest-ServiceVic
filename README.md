@@ -1,22 +1,29 @@
 ## How to run the project
+First download the project and unzip it and change to the project directory.
+Then you need to copy node-modules folder that contains common node modules into this directory. You can create a new react project to get this folder.
 
-First, you need to run :
+In the project directory, run the server :
 
 ### `node server`
 
-In order to start the server that constructs API endpoints for the react-app to consume.
-The server is listening on Port 8080. [http://localhost:8080]
+Start the server that constructs API endpoints for the react-app to consume.
+The server is listening on Port 8080. 
 
 
-In the project directory, you can run:
+Then, you can run:
 
 ### `npm start`
-
+  
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+You may also need to run 
+### `npm install` <packages>
+To compile the project and run it properly.
+
 
 ### `npm test`
 
