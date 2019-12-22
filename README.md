@@ -10,7 +10,7 @@ Start the server that constructs API endpoints for the react-app to consume.
 The server is listening on Port 8080. 
 
 
-Then, you can run:
+Open a new terminal and change to the project directory, you can run:
 
 ### `npm start`
   
