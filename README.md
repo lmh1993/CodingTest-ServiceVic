@@ -5,6 +5,7 @@ First, you need to run :
 ### `node server`
 
 In order to start the server that constructs API endpoints for the react-app to consume.
+The server is listening on Port 8080. [http://localhost:8080]
 
 
 In the project directory, you can run:
@@ -21,6 +22,9 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+## Deployment
+Please note that the server.js file and package.json file need to be configured for deployment.
 
 ### `npm run build`
 
