@@ -1,6 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to run the project
 
-## Available Scripts
+First, you need to run :
+
+### `node server`
+
+In order to start the server that constructs API endpoints for the react-app to consume.
+
 
 In the project directory, you can run:
 
