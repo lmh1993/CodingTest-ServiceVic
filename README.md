@@ -1,6 +1,9 @@
 ## How to run the project
 First, download the project and unzip it and change to the project directory.
-Then, you need to copy node-modules folder that contains common node modules into this directory. You can create a new react project to get this folder.
+
+Then, run
+## `npm install`
+Alternatively, you can copy node-modules folder that contains common node modules into the project directory. 
 
 In the project directory, run the server :
 
