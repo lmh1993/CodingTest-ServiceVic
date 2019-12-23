@@ -4,24 +4,28 @@ import axios from 'axios';
 import DisplayCity from './DisplayCity';
 
 export class CitySearch extends Component<{}, SearchCity> {
-    weatherRef : React.RefObject<HTMLInputElement>;
+    handleKeyUp: any;
     clicked:boolean = false;
     constructor(props: Readonly<{}>) {
         super(props);
         this.state = {
             error: false,
-            value: '',
-            suggestions: [],
             city: {
                 id: null
             }
         }
-        this.weatherRef = React.createRef();
+        this.handleKeyUp = this.keyUpHandler.bind(this, 'SearchInput');
     }
 
-    getSuggestions = () => {
+    keyUpHandler(refName:string, e: any) {
+        let value = e.target.value;
+        this.getSuggestions(value);
+    }
+
+    getSuggestions = (value:string) => {
         this.clicked = true;
-        const inputValue = this.weatherRef.current.value.trim().toLowerCase();
+        //const inputValue = this.weatherRef.current.value.trim().toLowerCase();
+        const inputValue = value.trim().toLowerCase();
         axios.post('http://localhost:8080/api/weatherdata', {searchstring: inputValue})
             .then(res => {
                 const found = res.data.found;
@@ -44,12 +48,6 @@ export class CitySearch extends Component<{}, SearchCity> {
                 console.log(err);
             })
     };
-
-    giveSuggestions = (founds: Array<string>) => {
-        this.setState({
-            suggestions : founds 
-        })
-    }
 
     render() {
         const { error, city } = this.state;
@@ -74,8 +72,7 @@ export class CitySearch extends Component<{}, SearchCity> {
         }
         return (
             <div>
-                <input type="text" ref={this.weatherRef}/>
-                <button onClick={this.getSuggestions} className="my-button">Search</button>
+                <input type="text" onKeyPress={this.handleKeyUp} ref="SearchInput"/>
                 {resultMarkup}
             </div>
         )
